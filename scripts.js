@@ -7,6 +7,8 @@ const TabNavigation = (function() {
         // Remove active state from all tabs
         navItems.forEach(item => {
             item.classList.remove('nav__item--active');
+            // Update ARIA attribute
+            item.setAttribute('aria-selected', 'false');
         });
 
         // Hide all content sections
@@ -20,6 +22,7 @@ const TabNavigation = (function() {
 
         if (activeNavItem && activeContent) {
             activeNavItem.classList.add('nav__item--active');
+            activeNavItem.setAttribute('aria-selected', 'true');
             activeContent.classList.add('content--active');
         }
     }
@@ -31,8 +34,8 @@ const TabNavigation = (function() {
                 switchTab(targetTab);
             });
 
-            // Keyboard accessibility
-            item.addEventListener('keypress', function(e) {
+            // Keyboard accessibility — use keydown (keypress is deprecated)
+            item.addEventListener('keydown', function(e) {
                 if (e.key === 'Enter' || e.key === ' ') {
                     e.preventDefault();
                     const targetTab = this.getAttribute('data-tab');
@@ -46,74 +49,17 @@ const TabNavigation = (function() {
     return { init, switchTab };
 })();
 
-// ==================== IMAGE MODAL MODULE ====================
-const ImageModal = (function() {
-    const modal = document.getElementById('image-modal');
-    const modalImg = document.getElementById('modal-image');
-    const closeBtn = document.querySelector('.modal__close');
-
-    function openModal(imageSrc, imageAlt) {
-        if (!modal || !modalImg) return;
-        
-        modal.classList.add('modal--active');
-        modalImg.src = imageSrc;
-        modalImg.alt = imageAlt;
-        document.body.style.overflow = 'hidden'; // Prevent scrolling
-    }
-
-    function closeModal() {
-        if (!modal) return;
-        
-        modal.classList.remove('modal--active');
-        document.body.style.overflow = ''; // Restore scrolling
-    }
-
-    function init() {
-        // Close button
-        if (closeBtn) {
-            closeBtn.addEventListener('click', closeModal);
-        }
-
-        // Close on background click
-        if (modal) {
-            modal.addEventListener('click', function(e) {
-                if (e.target === modal) {
-                    closeModal();
-                }
-            });
-        }
-
-        // Close on Escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeModal();
-            }
-        });
-
-        // Attach click handlers to all project images
-        const projectImages = document.querySelectorAll('[data-modal-img]');
-        projectImages.forEach(img => {
-            img.addEventListener('click', function() {
-                openModal(this.src, this.alt);
-            });
-        });
-    }
-
-    return { init };
-})();
-
-// ==================== INTERNAL TAB LINK HANDLER ====================
 // ==================== INTERNAL TAB LINK HANDLER ====================
 const InternalTabLinks = (function() {
     function init() {
         const links = document.querySelectorAll('a[href^="#"][data-tab]');
-        
+
         links.forEach(link => {
             link.addEventListener('click', function(e) {
-                e.preventDefault(); // Prevent default anchor jump
+                e.preventDefault();
 
                 const targetTab = this.getAttribute('data-tab');
-                const targetId = this.getAttribute('data-target'); // new: scroll to specific element
+                const targetId = this.getAttribute('data-target');
 
                 if (!targetTab) return;
 
@@ -138,10 +84,8 @@ const InternalTabLinks = (function() {
     return { init };
 })();
 
-
 // ==================== INITIALIZE APP ====================
 document.addEventListener('DOMContentLoaded', function() {
     TabNavigation.init();
-    ImageModal.init();
-    InternalTabLinks.init(); // <-- activate internal tab links
+    InternalTabLinks.init();
 });

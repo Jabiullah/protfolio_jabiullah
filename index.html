@@ -2,59 +2,101 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Rabius Sani Jabiullah — Application Technical Engineer and HCI/AI researcher specializing in user-centered systems and mobile technologies.">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="description" content="Rabius Sani Jabiullah — Application Technical Engineer and HCI researcher specializing in user-centered systems and mobile technologies.">
     <meta name="author" content="Rabius Sani Jabiullah">
+
+    <!-- Open Graph / Social Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Rabius Sani Jabiullah — Application Technical Engineer & HCI Researcher">
+    <meta property="og:description" content="Application Technical Engineer at IdeaScale. Researcher in Human–Computer Interaction, user-centered design, and mobile technologies for marginalized communities in Bangladesh.">
+    <meta property="og:image" content="image-rj.png">
+    <meta property="og:image:alt" content="Rabius Sani Jabiullah profile photo">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Rabius Sani Jabiullah — HCI Researcher">
+    <meta name="twitter:description" content="Application Technical Engineer at IdeaScale. HCI researcher focused on mobile technologies and marginalized communities in Bangladesh.">
+    <meta name="twitter:image" content="image-rj.png">
+
+    <!-- Theme color for mobile browsers -->
+    <meta name="theme-color" content="#000000">
+
     <title>Rabius Sani Jabiullah - Application Technical Engineer</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts: reliable, screen-optimized web fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <main class="portfolio">
         <div class="portfolio__center">
+
             <!-- Header Section -->
             <header class="header">
                 <div class="header__profile">
+
                     <div class="header__info">
                         <h1 class="header__name">Rabius Sani Jabiullah</h1>
                         <p class="header__title">Application Technical Engineer at IdeaScale</p>
                         <p class="header__contact">
-                            <strong>Email:</strong> robiussanijabiullah [at] gmail [dot] com
+                            robiussanijabiullah [at] gmail [dot] com
                         </p>
                         <div class="header__links">
-                            <a href="Rabius%20Sani%20Jabiullah-CV.pdf" download="Rabius_Sani_Jabiullah_CV.pdf" aria-label="Download CV">[CV]</a>
-                            <a href="https://medium.com/@prottoy21" target="_blank" rel="noopener noreferrer" aria-label="Medium Profile">[Medium]</a>
-                            <a href="https://orcid.org/0009-0008-1649-4355" target="_blank" rel="noopener noreferrer" aria-label="ORCID Profile">[ORCID]</a>
+                            <a href="Rabius%20Sani%20Jabiullah-CV.pdf" download="Rabius_Sani_Jabiullah_CV.pdf" aria-label="Download CV">CV</a>
+                            <a href="https://medium.com/@prottoy21" target="_blank" rel="noopener noreferrer" aria-label="Medium Profile">Medium</a>
+                            <a href="https://orcid.org/0009-0008-1649-4355" target="_blank" rel="noopener noreferrer" aria-label="ORCID Profile">ORCID</a>
                         </div>
                     </div>
+
                     <img src="image-rj.png" alt="Profile photo of Rabius Sani Jabiullah" class="header__image">
                 </div>
             </header>
 
+            
+
             <!-- Navigation -->
             <nav class="nav" role="navigation" aria-label="Main navigation">
-                <ul class="nav__list">
-                    <li class="nav__item nav__item--active" data-tab="about" role="button" tabindex="0" aria-label="About section">About</li>
-                    <li class="nav__item" data-tab="projects" role="button" tabindex="0" aria-label="Projects section">Projects</li>
-                    <li class="nav__item" data-tab="research" role="button" tabindex="0" aria-label="Research section">Research</li>
-                    <li class="nav__item" data-tab="team" role="button" tabindex="0" aria-label="Team section">Team</li>
+                <ul class="nav__list" role="tablist">
+                    <li class="nav__item nav__item--active"
+                        data-tab="about"
+                        role="tab"
+                        tabindex="0"
+                        aria-selected="true"
+                        aria-controls="about-content">About</li>
+                    <li class="nav__item"
+                        data-tab="projects"
+                        role="tab"
+                        tabindex="0"
+                        aria-selected="false"
+                        aria-controls="projects-content">Projects</li>
+                    <li class="nav__item"
+                        data-tab="research"
+                        role="tab"
+                        tabindex="0"
+                        aria-selected="false"
+                        aria-controls="research-content">Research</li>
+                    <li class="nav__item"
+                        data-tab="team"
+                        role="tab"
+                        tabindex="0"
+                        aria-selected="false"
+                        aria-controls="team-content">Team</li>
                 </ul>
             </nav>
 
             <!-- About Content -->
-            <section class="content content--active" id="about-content" aria-labelledby="about-heading">
+            <section class="content content--active" id="about-content" role="tabpanel" aria-labelledby="about-tab">
+                <h2 class="content__heading u-visually-hidden">About</h2>
                 <div class="content__text">
                     <p>
                         I am currently working as an Application Technical Engineer at <a href="https://ideascale.com/" target="_blank" rel="noopener noreferrer">IdeaScale</a>. My research interests focus on Human–Computer Interaction, particularly at the intersection of user-centered design and interactive technologies. I am driven by a commitment to addressing real-world challenges faced by end users through thoughtful system design and technology-driven solutions.
                     </p>
                     <p class="u-mt-md">
                         <strong>Recent Highlight:</strong> Dec '25 — &ldquo;Between Control and Safety: Purpose-driven Location Sharing Experiences in Bangladesh&rdquo; (First-author paper accepted at <a href="#research-content" data-tab="research" data-target="iccit-2025">ICCIT 2025</a>).
-
                     </p>
-
                     <p class="u-mt-md">
-                        During my undergraduate studies, I pursued software engineering and system design projects aimed at solving practical societal problems. This work received recognition at United International University’s Project Showcase, earning awards in <a href="#projects-content" data-tab="projects" data-target="shohoj-thikana">Software Engineering ('22)</a> and <a href="#projects-content" data-tab="projects" data-target="krishok-bondhu">System Design ('22)</a>.
-
+                        During my undergraduate studies, I pursued software engineering and system design projects aimed at solving practical societal problems. This work received recognition at United International University's Project Showcase, earning awards in <a href="#projects-content" data-tab="projects" data-target="shohoj-thikana">Software Engineering ('22)</a> and <a href="#projects-content" data-tab="projects" data-target="krishok-bondhu">System Design ('22)</a>.
                     </p>
                     <p class="u-mt-md">
                         I hold a Bachelor of Science in Computer Science from United International University. Throughout my academic and professional journey, I have been known as Rabius Sani Jabiullah in all formal contexts, including publications.
@@ -62,12 +104,12 @@
                     <p class="u-mt-md">
                         With a strong interest in advancing user experience and responsible AI, I continue to explore research at the intersection of <strong>Human–Computer Interaction</strong> and <strong>Artificial Intelligence</strong>, aiming to contribute meaningful insights to user-centered system design.
                     </p>
-
                 </div>
             </section>
 
             <!-- Projects Content -->
-            <section class="content" id="projects-content" aria-labelledby="projects-heading">
+            <section class="content" id="projects-content" role="tabpanel" aria-labelledby="projects-tab">
+                <h2 class="content__heading u-visually-hidden">Projects</h2>
                 <div class="content__text">
                     <p>
                         My projects revolve around addressing end users' core issues and placing their needs at the forefront of development. Sustainability and users' fundamental concerns are at the heart of my work. I dedicate my efforts to studying, analyzing, and designing mobile technologies, mainly focusing on marginalized populations across Bangladesh.
@@ -80,7 +122,6 @@
                         <a href="https://github.com/Jabiullah/ShohozThikana" target="_blank" rel="noopener noreferrer" aria-label="Shohoj Thikana GitHub">[github]</a>
                     </h3>
                     <div class="project__content">
-                        
                         <div class="project__text">
                             <p>
                                 In online shopping, customers must share personal details like home addresses, phone numbers, and house information with shop owners and delivery organizations. This poses security risks as it becomes challenging to monitor or trace the usage of this sensitive information. Once shared, customers lose control over their data, leading to potential security breaches.
@@ -92,14 +133,13 @@
                     </div>
                     <div class="project__footer">
                         <p>
-                            This project significantly enhances user security and control over personal information. It allows users to manage their data proactively, ensuring privacy and customization. It was recognized as the 
-                            <a href="https://www.facebook.com/photo.php?fbid=187933210576134&id=100080783675315&set=a.159753340060788&mibextid=oFDknk&rdid=SAdSNEYQZ1BBakWm&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FMGzwoVQQcLwU7aKR%2F%3Fmibextid%3DoFDknk" 
+                            This project significantly enhances user security and control over personal information. It allows users to manage their data proactively, ensuring privacy and customization. It was recognized as the
+                            <a href="https://www.facebook.com/photo.php?fbid=187933210576134&id=100080783675315&set=a.159753340060788&mibextid=oFDknk&rdid=SAdSNEYQZ1BBakWm&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FMGzwoVQQcLwU7aKR%2F%3Fmibextid%3DoFDknk"
                             target="_blank" rel="noopener noreferrer" aria-label="Shohoj Thikana Facebook">
-                            <strong>runner-up</strong></a> 
+                            <strong>runner-up</strong></a>
                             in the Software Engineering Lab at the CSE Project Show ('22).
                         </p>
                     </div>
-
                 </article>
 
                 <article class="project">
@@ -108,7 +148,6 @@
                         <a href="https://github.com/Jabiullah/Krishok-Bondhu" target="_blank" rel="noopener noreferrer" aria-label="Krishok Bondhu GitHub">[github]</a>
                     </h3>
                     <div class="project__content">
-                        
                         <div class="project__text">
                             <p>
                                 Bangladesh's agricultural sector faces severe challenges due to high loan interest rates, lengthy paperwork, and inadequate risk management. These issues make it difficult for farmers to secure the necessary funds for cultivation, leading many to abandon farming, which threatens the country's economy.
@@ -116,18 +155,16 @@
                             <p class="u-mt-sm">
                                 The proposed solution, Krishok Bondhu, introduces a <strong>Grow-Now-Pay-Later (GNPL)</strong> policy. This system allows farmers to acquire essential agricultural products like seeds and fertilizer without immediate full payment. Instead, they can repay the costs after harvest, reducing financial stress and encouraging continuous cultivation.
                             </p>
-
                         </div>
                     </div>
                     <div class="project__footer">
-                            <p>
-                                This project won 
-                                <a href="https://www.facebook.com/photo.php?fbid=160500819986040&id=100080783675315&set=a.159753340060788&mibextid=oFDknk&rdid=hKNvDeZF4eXfz6TY&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FunG8KFsF6Z3EygUX%2F%3Fmibextid%3DoFDknk" 
-                                target="_blank" rel="noopener noreferrer" aria-label="Krishok Bondhu Facebook">
-                                <strong>first place</strong></a> 
-                                in the System Design Project Showcase at United International University ('22).
-                            </p>
-
+                        <p>
+                            This project won
+                            <a href="https://www.facebook.com/photo.php?fbid=160500819986040&id=100080783675315&set=a.159753340060788&mibextid=oFDknk&rdid=hKNvDeZF4eXfz6TY&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FunG8KFsF6Z3EygUX%2F%3Fmibextid%3DoFDknk"
+                            target="_blank" rel="noopener noreferrer" aria-label="Krishok Bondhu Facebook">
+                            <strong>first place</strong></a>
+                            in the System Design Project Showcase at United International University ('22).
+                        </p>
                         <p class="u-mt-sm">
                             Implementing the Krishok Bondhu system has the potential to revolutionize agriculture in Bangladesh by providing farmers with the financial flexibility to continue their work without the burden of high-interest loans. This approach stabilizes farmers' incomes and promotes sustainable agricultural practices, significantly enhancing the livelihoods of millions of farmers in rural areas.
                         </p>
@@ -136,68 +173,69 @@
             </section>
 
             <!-- Research Content -->
-            <section class="content" id="research-content" aria-labelledby="research-heading">
+            <section class="content" id="research-content" role="tabpanel" aria-labelledby="research-tab">
+                <h2 class="content__heading u-visually-hidden">Research</h2>
                 <div class="content__text">
                     <p>
-                        The core of my research work lies in promoting sustainability and prioritizing the essential concerns of users. My dedication is directed towards investigating, analyzing, and developing mobile technologies, focusing on marginalized communities in Bangladesh. By leveraging user-centric design principles, my research aims to create impactful and inclusive technological advancements that empower these populations, ensuring their unique needs and circumstances are effectively met.
+                        Prioritizing the essential concerns of users lies at the core of my research. Through investigating, analyzing, and applying user-centric design principles, the work focuses on making technology more accessible and inclusive particularly for marginalized populations in Bangladesh — ensuring their unique needs and circumstances are effectively met.
                     </p>
                 </div>
 
                 <article class="research__item">
-                    <h3 class="research__title" id="iccit-2025">Control and Safety in Location Sharing</h3>
+                    <h3 class="research__title" id="iccit-2025">Between Control and Safety: Purpose-driven Location Sharing Experiences in Bangladesh</h3>
                     <div class="research__text">
-                        
-                        <p class="u-mt-sm">
-                            I conducted an exploratory HCI study on purpose-driven location sharing in Bangladesh, examining how smartphone users manage control, trust, and safety when sharing location information for everyday needs such as deliveries, transportation, and social coordination. I studied how users frequently rely on informal workarounds—such as typing addresses, sharing landmarks, images, or voice notes—due to usability and control limitations in existing platforms. I analyzed how shared location data becomes difficult to retract once disclosed, leading to concerns about misuse, screenshots, and long-term data retention. I also investigated gendered experiences of location sharing and found that women and gender-diverse users adopt additional precautionary strategies yet continue to experience heightened discomfort and safety risks. Through this research, I identified key socio-technical gaps in current location-sharing systems and highlighted design opportunities for more context-aware, trust-sensitive, and gender-inclusive solutions in HCI.
+                        <p class="research__meta">
+                            <span class="research__authors">Rabius Sani Jabiullah, Khandakar Nur Md. Shakil, Prianka Akter</span><br>
+                            <span class="research__venue">27th International Conference on Computer and Information Technology (ICCIT 2025)</span><br>
+                            <span class="research__status">Accepted — December 2025</span>
                         </p>
-
-                        <p><strong>Reference Paper:</strong> [ICCIT '25]</p>
+                        <p class="u-mt-sm">
+                            This study examines purpose-driven location sharing among smartphone users in Bangladesh, focusing on how individuals navigate control, trust, and safety across everyday contexts such as deliveries, transportation, and social coordination. Findings reveal that users frequently rely on informal workarounds — including typed addresses, landmark descriptions, images, and voice notes — due to usability and control limitations in existing platforms. The research further identifies how disclosed location data becomes difficult to retract, raising concerns around misuse, screenshots, and long-term retention. Gendered experiences are also examined, with women and gender-diverse users found to adopt heightened precautionary strategies while continuing to face elevated safety risks. The study surfaces key socio-technical gaps in current location-sharing systems and proposes design opportunities for more context-aware, trust-sensitive, and gender-inclusive HCI solutions.
+                        </p>
+                        <p class="u-mt-sm research__doi">
+                            <em>DOI/link (IEEE proceedings pending).</em>
+                        </p>
                     </div>
                 </article>
             </section>
 
             <!-- Team Content -->
-            <section class="content" id="team-content" aria-labelledby="team-heading">
+            <section class="content" id="team-content" role="tabpanel" aria-labelledby="team-tab">
+                <h2 class="content__heading">Research Team</h2>
                 <div class="content__text">
-                    <h3 id="team-heading">Research Team</h3>
-                    <ul class="team__list">
-                        <li class="team__name">
-                            <a href="https://github.com/Shakilkhandaker" target="_blank" rel="noopener noreferrer">Khandakar Nur Md. Shakil</a>
-                            <span class="team__duration"> (Spring 2021 – Present)</span>
-                        </li>
-
-                        <li class="team__name">
-                            <a href="https://github.com/prianka02" target="_blank" rel="noopener noreferrer">Prianka Akter</a>
-                            <span class="team__duration"> (Fall 2021 – Present)</span>
-                        </li>
-
-                        <li class="team__name">
-                            <a href="https://github.com/Saif-Tasnim" target="_blank" rel="noopener noreferrer">Saif Tasnim Chowdhury</a>
-                            <span class="team__duration"> (Summer 2024 – Present)</span>
-                        </li>
-
-                        <li class="team__name">
-                            <a href="https://www.linkedin.com/in/taslima-ifnath-934a643a7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">Taslima Ifnath</a>
-                            <span class="team__duration"> (Fall 2025 – Present)</span>
-                        </li>
-
-                        <li class="team__name">
-                            <a href="https://www.linkedin.com/in/munirah-anjum-243677400/" target="_blank" rel="noopener noreferrer">Munirah Anjum</a>
-                            <span class="team__duration"> (Fall 2025 – Present)</span>
-                        </li>
-
-                    </ul>
+                    <p>The following collaborators have contributed to my research projects on HCI, mobile technologies, and user-centered design.</p>
                 </div>
+                <ul class="team__list">
+                    <li class="team__name">
+                        <a href="https://github.com/Shakilkhandaker" target="_blank" rel="noopener noreferrer">Khandakar Nur Md. Shakil</a>
+                        <span class="team__duration">(Spring 2021 – Present)</span>
+                    </li>
+                    <li class="team__name">
+                        <a href="https://github.com/prianka02" target="_blank" rel="noopener noreferrer">Prianka Akter</a>
+                        <span class="team__duration">(Fall 2021 – Present)</span>
+                    </li>
+                    <li class="team__name">
+                        <a href="https://github.com/Saif-Tasnim" target="_blank" rel="noopener noreferrer">Saif Tasnim Chowdhury</a>
+                        <span class="team__duration">(Summer 2024 – Present)</span>
+                    </li>
+                    <li class="team__name">
+                        <a href="https://www.linkedin.com/in/taslima-ifnath-934a643a7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">Taslima Ifnath</a>
+                        <span class="team__duration">(Fall 2025 – Present)</span>
+                    </li>
+                    <li class="team__name">
+                        <a href="https://www.linkedin.com/in/munirah-anjum-243677400/" target="_blank" rel="noopener noreferrer">Munirah Anjum</a>
+                        <span class="team__duration">(Fall 2025 – Present)</span>
+                    </li>
+                </ul>
             </section>
 
-        </div>
-
-        <!-- Modal for Images -->
-        <div class="modal" id="image-modal" role="dialog" aria-modal="true" aria-label="Image preview">
-            <span class="modal__close" role="button" aria-label="Close modal">&times;</span>
-            <img class="modal__content" id="modal-image" alt="">
-        </div>
+        </div><!-- /.portfolio__center -->
     </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="footer__text">Last updated: May 2025</p>
+    </footer>
 
     <script src="scripts.js"></script>
 </body>
