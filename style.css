@@ -363,17 +363,17 @@ a:hover {
 
 /* ==================== FOOTER ==================== */
 .footer {
-    max-width: var(--content-max-width);
-    margin: var(--spacing-xl) auto 0;
-    border-top: 1px solid var(--color-border-light);
-    padding: var(--spacing-md) 0;
-    text-align: center;
+    position: fixed;
+    bottom: var(--spacing-md);
+    right: var(--spacing-md);
+    text-align: right;
 }
 
 .footer__text {
     font-family: var(--font-ui);
-    font-size: var(--font-size-small);
+    font-size: 0.75rem;
     color: var(--color-muted);
+    opacity: 0.6;
 }
 
 /* ==================== UTILITY CLASSES ==================== */
@@ -492,6 +492,13 @@ a:hover {
 
     .content {
         max-width: 100%;
+    }
+
+    .footer {
+        position: static;
+        text-align: center;
+        padding: var(--spacing-md) 0 var(--spacing-sm);
+        opacity: 0.6;
     }
 }
 
